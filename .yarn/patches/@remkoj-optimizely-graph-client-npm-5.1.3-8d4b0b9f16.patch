@@ -1,0 +1,12 @@
+diff --git a/dist/config.js b/dist/config.js
+index 7cf6b1ad15a523e3417ccb37646a3a41ba51c302..4d96d5d878480ade57b164bcdfd06e5a04248e29 100644
+--- a/dist/config.js
++++ b/dist/config.js
+@@ -12,6 +12,7 @@ export function readEnvironmentVariables() {
+         query_log: getBoolean('OPTIMIZELY_GRAPH_QUERY_LOG', () => getBoolean('OPTIMIZELY_CONTENTGRAPH_QUERY_LOG', false)),
+         debug: getBoolean('OPTIMIZELY_DEBUG', () => getBoolean('DXP_DEBUG', false)),
+         publish: getOptional('OPTIMIZELY_PUBLISH_TOKEN'),
++        vercel_automation_bypass: getOptional('VERCEL_AUTOMATION_BYPASS_SECRET'),
+         opti_cms_schema: getSelection('OPTIMIZELY_CMS_SCHEMA', [OptiCmsSchema.CMS12, OptiCmsSchema.CMS13], OptiCmsSchema.CMS13),
+         graph_schema: getSelection('OPTIMIZELY_GRAPH_SCHEMA', [SchemaVersion.Default, SchemaVersion.Next], SchemaVersion.Default)
+     };
