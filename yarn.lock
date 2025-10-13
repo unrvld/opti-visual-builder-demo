@@ -3002,7 +3002,7 @@ __metadata:
   resolution: "@remkoj/optimizely-frontend@workspace:."
   dependencies:
     "@graphql-typed-document-node/core": "npm:^3.2.0"
-    "@remkoj/optimizely-graph-client": "npm:^5.1.3"
+    "@remkoj/optimizely-graph-client": "patch:@remkoj/optimizely-graph-client@npm%3A5.1.3#~/.yarn/patches/@remkoj-optimizely-graph-client-npm-5.1.3-8d4b0b9f16.patch"
     "@remkoj/optimizely-graph-functions": "npm:^5.1.3"
     "@types/source-map-support": "npm:^0.5.10"
     "@yarnpkg/sdks": "npm:^3.2.2"
@@ -3039,7 +3039,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@remkoj/optimizely-graph-cli@npm:^5.1.3":
+"@remkoj/optimizely-graph-cli@npm:5.1.3":
   version: 5.1.3
   resolution: "@remkoj/optimizely-graph-cli@npm:5.1.3"
   dependencies:
@@ -3059,7 +3059,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remkoj/optimizely-graph-client@npm:^5.1.3":
+"@remkoj/optimizely-graph-cli@patch:@remkoj/optimizely-graph-cli@npm%3A5.1.3#~/.yarn/patches/@remkoj-optimizely-graph-cli-npm-5.1.3-4566f0a99e.patch":
+  version: 5.1.3
+  resolution: "@remkoj/optimizely-graph-cli@patch:@remkoj/optimizely-graph-cli@npm%3A5.1.3#~/.yarn/patches/@remkoj-optimizely-graph-cli-npm-5.1.3-4566f0a99e.patch::version=5.1.3&hash=d75a88"
+  dependencies:
+    chalk: "npm:^5.4.1"
+    cli-table3: "npm:^0.6.5"
+    compare-versions: "npm:^6.1.1"
+    dotenv: "npm:^16.6.1"
+    dotenv-expand: "npm:^12.0.2"
+    figures: "npm:^6.1.0"
+    glob: "npm:^11.0.3"
+    yargs: "npm:^17.7.2"
+  peerDependencies:
+    "@remkoj/optimizely-graph-client": ^5.1.3
+  bin:
+    opti-graph: bin/index.js
+  checksum: 10c0/27ce61e1a379ce66e41ac1fbc15a6761d03e13bb852592873394f39c9eb21a9fe24fbe5289da6e34bbcf3edae039166604ca3f616438944efc1c123dd10efc36
+  languageName: node
+  linkType: hard
+
+"@remkoj/optimizely-graph-client@npm:5.1.3":
   version: 5.1.3
   resolution: "@remkoj/optimizely-graph-client@npm:5.1.3"
   dependencies:
@@ -3068,6 +3088,18 @@ __metadata:
   peerDependencies:
     graphql-request: ^6
   checksum: 10c0/a55be3c852139eb60f3ae0621eb5fab9370f51baac2812598c8228da1d7f72fcd6a9c5b15f48b766a55ee2eb68e39af5d56f6ec1438d95075b54f62c94b65173
+  languageName: node
+  linkType: hard
+
+"@remkoj/optimizely-graph-client@patch:@remkoj/optimizely-graph-client@npm%3A5.1.3#~/.yarn/patches/@remkoj-optimizely-graph-client-npm-5.1.3-8d4b0b9f16.patch":
+  version: 5.1.3
+  resolution: "@remkoj/optimizely-graph-client@patch:@remkoj/optimizely-graph-client@npm%3A5.1.3#~/.yarn/patches/@remkoj-optimizely-graph-client-npm-5.1.3-8d4b0b9f16.patch::version=5.1.3&hash=e367cf"
+  dependencies:
+    crypto-js: "npm:^4.2.0"
+    uuid: "npm:^11.1.0"
+  peerDependencies:
+    graphql-request: ^6
+  checksum: 10c0/4b67b9758f7246487739733d6cf14143bcd10aad18644a6119e207c8b8a5a799a2e3d2ee9b0162199e1e517069adf25127056f35a60eac55c3218c6914b906e9
   languageName: node
   linkType: hard
 
@@ -6788,8 +6820,8 @@ __metadata:
     "@remkoj/optimizely-cms-nextjs": "npm:^5.1.3"
     "@remkoj/optimizely-cms-react": "npm:^5.1.3"
     "@remkoj/optimizely-fx-nextjs-cli": "workspace:^"
-    "@remkoj/optimizely-graph-cli": "npm:^5.1.3"
-    "@remkoj/optimizely-graph-client": "npm:^5.1.3"
+    "@remkoj/optimizely-graph-cli": "patch:@remkoj/optimizely-graph-cli@npm%3A5.1.3#~/.yarn/patches/@remkoj-optimizely-graph-cli-npm-5.1.3-4566f0a99e.patch"
+    "@remkoj/optimizely-graph-client": "patch:@remkoj/optimizely-graph-client@npm%3A5.1.3#~/.yarn/patches/@remkoj-optimizely-graph-client-npm-5.1.3-8d4b0b9f16.patch"
     "@remkoj/optimizely-graph-functions": "npm:^5.1.3"
     "@remkoj/optimizely-one-nextjs": "npm:^5.1.3"
     "@tailwindcss/aspect-ratio": "npm:^0.4.2"
