@@ -2,6 +2,7 @@ import type { LayoutProps } from "@remkoj/optimizely-cms-react"
 import type { ReactNode } from "react"
 import type DefaultImageElementStyles from "./DefaultImageElement.opti-style.json"
 import type IconImageElementStyles from "./IconImageElement.opti-style.json"
+import type RoundImageElementStyles from "./RoundImageElement.opti-style.json"
 
 export type DefaultImageElementProps = LayoutProps<typeof DefaultImageElementStyles>
 export type DefaultImageElementComponentProps<DT extends Record<string, any> = Record<string, any>> = {
@@ -16,6 +17,12 @@ export type IconImageElementComponentProps<DT extends Record<string, any> = Reco
     layoutProps: IconImageElementProps | undefined
 } & JSX.IntrinsicElements['div']
 export type IconImageElementComponent<DT extends Record<string, any> = Record<string, any>> = (props: IconImageElementComponentProps<DT>) => ReactNode
+export type RoundImageElementProps = LayoutProps<typeof RoundImageElementStyles>
+export type RoundImageElementComponentProps<DT extends Record<string, any> = Record<string, any>> = {
+    data: DT
+    layoutProps: RoundImageElementProps | undefined
+} & JSX.IntrinsicElements['div']
+export type RoundImageElementComponent<DT extends Record<string, any> = Record<string, any>> = (props: RoundImageElementComponentProps<DT>) => ReactNode
 
 
 export type ImageElementLayoutProps = DefaultImageElementProps | IconImageElementProps
@@ -39,4 +46,9 @@ export function isDefaultImageElementProps(props?: ImageElementLayoutProps | nul
 export function isIconImageElementProps(props?: ImageElementLayoutProps | null) : props is IconImageElementProps
 {
     return props?.template == "IconImageElement"
+}
+
+export function isIRoundImageElementProps(props?: ImageElementLayoutProps | null) : props is RoundImageElementProps
+{
+    return props?.template == "RoundImageElement"
 }

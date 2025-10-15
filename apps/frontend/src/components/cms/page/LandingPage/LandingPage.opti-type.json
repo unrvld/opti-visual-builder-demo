@@ -37,7 +37,12 @@
       "items": {
         "type": "content",
         "allowedTypes": [],
-        "restrictedTypes": []
+        "restrictedTypes": [
+          "LayoutSettingsBlock",
+          "PageSeoSettings",
+          "MegaMenuGroupBlock",
+          "MenuNavigationBlock"
+        ]
       }
     },
     "SeoSettings": {

@@ -42,10 +42,8 @@ export const RichTextElementElement: CmsComponent<
       cmsId={contentLink.key}
       cmsFieldName="text"
       ctx={ctx}
-
       // Set the actual text
       text={data.text?.json}
-
       // Additional properties for the 'div' wrapper
       className={cssClassName}
       data-component="RichTextElement"
