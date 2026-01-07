@@ -1,5 +1,5 @@
 diff --git a/bin/index.js b/bin/index.js
-index 5919d2b43241c189c9008b966f899858ed4df2e9..0201fc4f36f1c3a5fac89a8f5b5c76e56dda7ce2 100644
+index bcb2e672189e91140347123cb20bbcebb02e22c4..e1892368c0051b8ad0435d8e10132cd725187c46 100644
 --- a/bin/index.js
 +++ b/bin/index.js
 @@ -103,9 +103,12 @@ const publishToVercelModule$2 = {
@@ -11,7 +11,7 @@ index 5919d2b43241c189c9008b966f899858ed4df2e9..0201fc4f36f1c3a5fac89a8f5b5c76e5
          if (token)
              webhookTarget.searchParams.set('token', token);
 +        if (vercelAutomationBypass)
-++            webhookTarget.searchParams.set('x-vercel-protection-bypass', vercelAutomationBypass);
++++            webhookTarget.searchParams.set('x-vercel-protection-bypass', vercelAutomationBypass);
          process.stdout.write(`${chalk.yellow(chalk.bold(figures.arrowRight))} Registering webhook target: ${chalk.yellow(webhookTarget.href)}\n`);
          if (webhookTarget.hostname == 'localhost') {
              process.stderr.write(chalk.redBright(chalk.bold(figures.cross) + " Cannot register a localhost Site URL with Content Graph") + "\n");
@@ -24,7 +24,7 @@ index 5919d2b43241c189c9008b966f899858ed4df2e9..0201fc4f36f1c3a5fac89a8f5b5c76e5
          args.positional('path', { type: "string", describe: "The frontend route to invoke to publish", default: "/api/content/publish", demandOption: false });
          args.positional('verb', { type: "string", describe: "The HTTP verb to be used when sending the webhook", default: "POST", demandOption: false });
          args.option("publish_token", { alias: "pt", description: "Publishing token", string: true, type: "string", demandOption: !hasDefaultToken, default: defaultToken });
-++       args.option("vercel_automation_bypass", { type: "string", description: "Token used for automation to bypass vercel password protection", demandOption: false, default: defaultVercelAutomationBypass });
++        args.option("vercel_automation_bypass", { type: "string", description: "Token used for automation to bypass vercel password protection", demandOption: false, default: defaultVercelAutomationBypass });
          return args;
      }
  };
