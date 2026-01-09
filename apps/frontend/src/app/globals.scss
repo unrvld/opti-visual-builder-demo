@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@mixin at-desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 @layer utilities {
   .outer-padding {
     @apply lg:px-32 md:px-16 px-8;
@@ -256,24 +262,39 @@
       font-style: normal;
       font-weight: 300;
       &-01 {
-        font-size: 7.5rem; // 120px
+        font-size: 3.5rem; // 56px
         line-height: 100%;
-        letter-spacing: -2.4px;
-      }
+        letter-spacing: -1.12px;
+        @include at-desktop {
+          font-size: 7.5rem; // 120px
+          letter-spacing: -2.4px;}
+        }
       &-02 {
-        font-size: 5.9375rem; // 95px
+        font-size: 3.0625rem; // 49px
         line-height: 120%;
-        letter-spacing: -1.9px;
+        letter-spacing: -0.98px;
+        @include at-desktop {
+          font-size: 5.9375rem; // 95px
+          letter-spacing: -1.9px;
+        }
       }
       &-03 {
-        font-size: 4.75rem; // 120px
+        font-size: 2.4375rem; // 39px
         line-height: 120%;
-        letter-spacing: -1.52px;
+        letter-spacing: -0.78px;
+        @include at-desktop {
+          font-size: 4.75rem; // 76px
+          letter-spacing: -1.52px;
+        }
       }
       &-04 {
-        font-size: 3.8125rem; // 61px
+        font-size: 1.9375rem; // 31px
         line-height: 120%;
-        letter-spacing: -1.22px;
+        letter-spacing: -0.62px;
+        @include at-desktop {
+          font-size: 3.8125rem; // 61px
+          letter-spacing: -1.22px;
+        }
       }
     }
     

@@ -26,6 +26,7 @@
   "scripts": {
     "dev": "yarn workspace frontend dev",
     "dev:https": "yarn workspace frontend dev:https",
+    "build-only": "yarn workspace frontend build-only",
     "build": "yarn workspace frontend build",
     "start": "yarn workspace frontend start",
     "lint": "yarn workspace frontend lint",
