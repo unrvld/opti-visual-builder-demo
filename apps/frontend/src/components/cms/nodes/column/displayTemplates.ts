@@ -2,6 +2,7 @@ import type { LayoutProps } from "@remkoj/optimizely-cms-react"
 import type { ReactNode } from "react"
 import type CardColumnStyles from "./CardColumn/CardColumn.opti-style.json"
 import type DefaultColumnStyles from "./DefaultColumn/DefaultColumn.opti-style.json"
+import type UPocColumnStyles from './UPocColumn/UPocColumn.opti-style.json'
 
 export type CardColumnProps = LayoutProps<typeof CardColumnStyles>
 export type CardColumnComponentProps<DT extends Record<string, any> = Record<string, any>> = {
@@ -17,8 +18,15 @@ export type DefaultColumnComponentProps<DT extends Record<string, any> = Record<
 } & JSX.IntrinsicElements['div']
 export type DefaultColumnComponent<DT extends Record<string, any> = Record<string, any>> = (props: DefaultColumnComponentProps<DT>) => ReactNode
 
+export type UPocColumnProps = LayoutProps<typeof UPocColumnStyles>
+export type UPocColumnComponentProps<DT extends Record<string, any> = Record<string, any>> = {
+    data: DT
+    layoutProps: UPocColumnProps | undefined
+} & JSX.IntrinsicElements['div']
+export type UPocColumnComponent<DT extends Record<string, any> = Record<string, any>> = (props: UPocColumnComponentProps<DT>) => ReactNode
 
-export type ColumnLayoutProps = CardColumnProps | DefaultColumnProps
+
+export type ColumnLayoutProps = CardColumnProps | DefaultColumnProps | UPocColumnProps
 export type ColumnComponentProps<DT extends Record<string, any> = Record<string, any>, LP extends ColumnLayoutProps = ColumnLayoutProps> = {
     data: DT
     layoutProps: LP | undefined
@@ -34,6 +42,11 @@ export function isDefaultProps(props?: ColumnLayoutProps | null) : props is Defa
 export function isCardColumnProps(props?: ColumnLayoutProps | null) : props is CardColumnProps
 {
     return props?.template == "CardColumn"
+}
+
+export function isUPocColumnProps(props?: ColumnLayoutProps | null) : props is UPocColumnProps
+{
+    return props?.template == "UPocColumn"
 }
 
 export function isDefaultColumnProps(props?: ColumnLayoutProps | null) : props is DefaultColumnProps

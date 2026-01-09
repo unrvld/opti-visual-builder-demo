@@ -20,7 +20,7 @@ export const CardRow : CmsLayoutComponent<CardRowProps> = ({ contentLink, layout
 
     additionalClasses.push(vSpacingClasses[vSpacing])
     
-    return <Card cardColor={ color } className={`vb:row vb:row:CardRow ${ additionalClasses.join(' ')}`} direction={ colOrder == 'reversed' ? 'row_small_reversed' : 'row'}>
+    return <Card cardColor={ color } className={`vb:row vb:row:CardRow z-[10] ${ additionalClasses.join(' ')}`} direction={ colOrder == 'reversed' ? 'row_small_reversed' : 'row'}>
         { children }
     </Card>
 }

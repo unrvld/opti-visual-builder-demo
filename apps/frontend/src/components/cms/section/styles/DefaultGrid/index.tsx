@@ -32,7 +32,7 @@ export const DefaultGrid : DefaultGridComponent = ({ data, layoutProps, children
 
     // Standard (no-color section)
     if (sectionColor == 'default') {
-        const cssClasses = ["vb:section vb:section:DefaultGrid relative"]
+        const cssClasses = ["vb:section vb:section:DefaultGrid isolate relative"]
         cssClasses.push(GridWidths[gridWidth] ?? '')
         cssClasses.push("flex flex-col")
         cssClasses.push(VSpacings[vSpacing] ?? '')
@@ -42,7 +42,7 @@ export const DefaultGrid : DefaultGridComponent = ({ data, layoutProps, children
         </section>;
     }
 
-    const mainClasses = ["vb:section vb:section:DefaultGrid flex flex-col w-full"]
+    const mainClasses = ["vb:section vb:section:DefaultGrid isolate flex flex-col w-full"]
     mainClasses.push(VSpacings[vSpacing] ?? '')
     mainClasses.push(ColorClasses[sectionColor] ?? '')
     return <section className={ mainClasses.filter(x => x && x.length > 0).join(' ')} {...htmlProps}>

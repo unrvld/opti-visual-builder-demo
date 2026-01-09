@@ -3,17 +3,22 @@
 import { type ComponentTypeDictionary } from "@remkoj/optimizely-cms-react";
 import DefaultColumnComponent from "./DefaultColumn";
 import CardColumnComponent from "./CardColumn";
+import UPocColumn from "./UPocColumn";
 
 // Build dictionary
-export const NodesColumnFactory : ComponentTypeDictionary = [
-    { 
-        type: "DefaultColumn", 
-        component: DefaultColumnComponent 
-    },
-    { 
-        type: "CardColumn", 
-        component: CardColumnComponent 
-    }
+export const NodesColumnFactory: ComponentTypeDictionary = [
+  {
+    type: "DefaultColumn",
+    component: DefaultColumnComponent,
+  },
+  {
+    type: "CardColumn",
+    component: CardColumnComponent,
+  },
+  {
+    type: "UPocColumn",
+    component: UPocColumn,
+  },
 ];
 
 // Export dictionary

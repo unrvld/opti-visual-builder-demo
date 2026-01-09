@@ -26,7 +26,7 @@ export const UPocCTAElement: CTAElementUPocStylesComponent<
           "group flex items-center gap-x-2 px-6 py-3 rounded-[0.25rem] type-label type-label-cta",
           {
             "bg-red-400 text-white": ctaType === "primary",
-            "bg-transparent text-grey-600 border-spacing-1px border-grey-400 hover:border-grey-600 border":
+            "bg-transparent text-inherit border-spacing-1px border group-[.light]:border-grey-500 hover:group-[.light]:border-grey-600 group-[.dark]:border-grey-200 hover:group-[.dark]:border-white":
               ctaType === "secondary",
           },
         )}

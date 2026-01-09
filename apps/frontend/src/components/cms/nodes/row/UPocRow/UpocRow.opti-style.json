@@ -1,0 +1,48 @@
+{
+  "key": "UPocRowStyle",
+  "displayName": "UPOC",
+  "nodeType": "row",
+  "isDefault": false,
+  "settings": {
+    "spacing": {
+      "displayName": "Spacing",
+      "sortOrder": 10,
+      "choices": {
+        "small": {
+          "displayName": "Small (default)",
+          "sortOrder": 10
+        },
+        "none": {
+          "displayName": "None",
+          "sortOrder": 20
+        },
+        "medium": {
+          "displayName": "Medium",
+          "sortOrder": 30
+        },
+        "large": {
+          "displayName": "Large",
+          "sortOrder": 40
+        }
+      }
+    },
+    "alignment": {
+      "displayName": "Alignment",
+      "sortOrder": 20,
+      "choices": {
+        "start": {
+          "displayName": "Start",
+          "sortOrder": 10
+        },
+        "middle": {
+          "displayName": "Middle",
+          "sortOrder": 20
+        },
+        "end": {
+          "displayName": "End",
+          "sortOrder": 30
+        }
+      }
+    }
+  }
+}

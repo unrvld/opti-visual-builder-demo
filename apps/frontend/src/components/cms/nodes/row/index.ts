@@ -5,25 +5,30 @@ import DefaultRowComponent from "./DefaultRow";
 import CarouselRowComponent from "./CarouselRow";
 import CardRowComponent from "./CardRow";
 import BackgroundRowComponent from "./BackgroundRow";
+import UPocRowComponent from "./UPocRow";
 
 // Build dictionary
-export const NodesRowFactory : ComponentTypeDictionary = [
-    { 
-        type: "DefaultRow", 
-        component: DefaultRowComponent 
-    },
-    { 
-        type: "CarouselRow", 
-        component: CarouselRowComponent 
-    },
-    { 
-        type: "CardRow", 
-        component: CardRowComponent 
-    },
-    { 
-        type: "BackgroundRow", 
-        component: BackgroundRowComponent 
-    }
+export const NodesRowFactory: ComponentTypeDictionary = [
+  {
+    type: "DefaultRow",
+    component: DefaultRowComponent,
+  },
+  {
+    type: "CarouselRow",
+    component: CarouselRowComponent,
+  },
+  {
+    type: "CardRow",
+    component: CardRowComponent,
+  },
+  {
+    type: "BackgroundRow",
+    component: BackgroundRowComponent,
+  },
+  {
+    type: "UPocRowStyle",
+    component: UPocRowComponent,
+  },
 ];
 
 // Export dictionary

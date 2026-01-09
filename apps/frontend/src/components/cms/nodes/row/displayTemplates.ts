@@ -4,6 +4,7 @@ import type CardRowStyles from "./CardRow/CardRow.opti-style.json"
 import type CarouselRowStyles from "./CarouselRow/CarouselRow.opti-style.json"
 import type DefaultRowStyles from "./DefaultRow/DefaultRow.opti-style.json"
 import type BackgroundRowStyles from "./BackgroundRow/BackgroundRow.opti-style.json"
+import type UPocRowStyles from "./UPocRow/UpocRow.opti-style.json"
 
 export type CardRowProps = LayoutProps<typeof CardRowStyles>
 export type CardRowComponentProps<DT extends Record<string, any> = Record<string, any>> = {
@@ -33,8 +34,15 @@ export type BackgroundRowComponentProps<DT extends Record<string, any> = Record<
 } & JSX.IntrinsicElements['div']
 export type BackgroundRowComponent<DT extends Record<string, any> = Record<string, any>> = (props: BackgroundRowComponentProps<DT>) => ReactNode
 
+export type UPocRowProps = LayoutProps<typeof UPocRowStyles>
+export type UPocRowComponentProps<DT extends Record<string, any> = Record<string, any>> = {
+    data: DT
+    layoutProps: UPocRowProps | undefined
+} & JSX.IntrinsicElements['div']
+export type UPocRowComponent<DT extends Record<string, any> = Record<string, any>> = (props: UPocRowComponentProps<DT>) => ReactNode
 
-export type RowLayoutProps = CardRowProps | CarouselRowProps | DefaultRowProps | BackgroundRowProps
+
+export type RowLayoutProps = CardRowProps | CarouselRowProps | DefaultRowProps | BackgroundRowProps | UPocRowProps
 export type RowComponentProps<DT extends Record<string, any> = Record<string, any>, LP extends RowLayoutProps = RowLayoutProps> = {
     data: DT
     layoutProps: LP | undefined
@@ -65,4 +73,9 @@ export function isDefaultRowProps(props?: RowLayoutProps | null) : props is Defa
 export function isBackgroundRowProps(props?: RowLayoutProps | null) : props is BackgroundRowProps
 {
     return props?.template == "BackgroundRow"
+}
+
+export function isUPocRowProps(props?: RowLayoutProps | null) : props is UPocRowProps
+{
+    return props?.template == "UPocRowStyle"
 }

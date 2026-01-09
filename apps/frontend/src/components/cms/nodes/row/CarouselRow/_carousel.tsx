@@ -36,7 +36,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({
   //const itemWidth = windowWidth <= 900 ? 80 : 50
 
   return (
-    <div className={`${ className ? className + ' ': '' }relative w-full my-24 flex flex-col carousel`}>
+    <div className={`${ className ? className + ' ': '' }relative z-[10] w-full my-24 flex flex-col carousel`}>
       <section role="navigation" className="flex justify-center gap-10 mt-16 order-last" >
         <button onClick={handlePrev}>
           <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "rotate(180deg)" }} className={ currentIndex === -1 ? "text-mischka dark:text-ghost-white" : "text-vulcan dark:text-light-grey" }>
