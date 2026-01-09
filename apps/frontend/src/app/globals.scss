@@ -303,24 +303,40 @@
       font-style: normal;
       font-weight: 400;
       &-01 {
-        font-size: 3.0625rem; // 49px
+        font-size: 1.9375rem; // 31px
         line-height: 120%;
-        letter-spacing: -0.98px;
+        letter-spacing: -0.62px;
+        @include at-desktop {
+          font-size: 3.0625rem; // 49px
+          letter-spacing: -0.98px;
+        }
       }
       &-02 {
-        font-size: 2.4375rem; // 39px
+        font-size: 1.5625rem; // 25px
         line-height: 120%;
-        letter-spacing: -0.78px;
+        letter-spacing: -0.5px;
+        @include at-desktop {
+          font-size: 2.4375rem; // 39px
+          letter-spacing: -0.78px;
+        }
       }
       &-03 {
-        font-size: 1.9375rem; // 31px
-        line-height: 140%;
-        letter-spacing: -0.62px;
-      }
-      &-04 {
-        font-size: 1.5625rem; // 25px
+        font-size: 1.25rem; // 20px
         line-height: 140%;
         letter-spacing: -0.5px;
+        @include at-desktop {
+          font-size: 1.9375rem; // 31px
+          letter-spacing: -0.62px;
+        }
+      }
+      &-04 {
+        font-size: 0.9375rem; // 15px
+        line-height: 140%;
+        letter-spacing: -0.3px;
+        @include at-desktop {
+          font-size: 1.5625rem; // 25px
+          letter-spacing: -0.5px;
+        }
       }
     }
     
@@ -328,28 +344,45 @@
       @apply font-inter;
       font-style: normal;
       &-featured {
-        font-size: 2.4375rem; // 39px
-        font-weight: 300;
-        line-height: 140%; 
-        letter-spacing: -0.78px;
-      }
-      &-quote {
-        font-size: 1.9375rem; // 31px
-        font-weight: 300;
-        line-height: 140%; 
-        letter-spacing: -0.62px;
-      }
-      &-long {
         font-size: 1.5625rem; // 25px
-        font-weight: 400;
+        font-weight: 300;
         line-height: 140%; 
         letter-spacing: -0.5px;
+        @include at-desktop {
+          font-size: 2.4375rem; // 39px
+          letter-spacing: -0.78px;
+        }
+      }
+      &-quote {
+        font-size: 1.25rem; // 20px
+        font-weight: 300;
+        line-height: 140%; 
+        letter-spacing: -0.4px;
+        @include at-desktop {
+          font-size: 1.9375rem; // 31px
+          letter-spacing: -0.62px;
+        }
+      }
+      &-long {
+        font-size: 0.9375rem; // 15px
+        font-weight: 400;
+        line-height: 140%; 
+        letter-spacing: -0.3px;
+        @include at-desktop {
+          font-size: 1.5625rem; // 25px
+          line-height: 180%; 
+          letter-spacing: -0.5px;
+        }
       }
       &-short {
-        font-size: 1rem; // 16px
+        font-size: 0.9375rem; // 15px
         font-weight: 400;
         line-height: 180%; 
-        letter-spacing: -0.32px;
+        letter-spacing: -0.26px;
+        @include at-desktop {
+          font-size: 1rem; // 16px
+          letter-spacing: -0.32px;
+        }
       }
     }
 
@@ -358,13 +391,19 @@
       font-style: normal;
       font-weight: 400;
       &-caps {
-        font-size: 0.8125rem; // 13px
+        font-size: 0.6875rem; // 11px
         line-height: 100%;
         text-transform: uppercase;
+        @include at-desktop {
+          font-size: 0.8125rem; // 13px
+        }
       }
       &-cta {
-        font-size: 1.125rem; // 18px
+        font-size: 1rem; // 16px
         line-height: 100%;
+        @include at-desktop {
+          font-size: 1.125rem; // 18px
+        }
       }
       &-info {
         font-size: 0.875rem; // 14px
