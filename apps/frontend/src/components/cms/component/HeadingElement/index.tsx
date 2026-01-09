@@ -1,9 +1,10 @@
 import { CmsComponent } from "@remkoj/optimizely-cms-react";
 import { HeadingElementDataFragmentDoc, type HeadingElementDataFragment } from "@/gql/graphql";
-import { isAnimatedHeadingStylesProps, isDefaultProps, type HeadingElementLayoutProps } from "./displayTemplates";
+import { isAnimatedHeadingStylesProps, isDefaultProps, isUPocHeadingStylesProps, type HeadingElementLayoutProps } from "./displayTemplates";
 import { CmsEditable } from "@remkoj/optimizely-cms-react/rsc";
 import { DefaultHeadingElement } from "./_default";
 import { AnimatedHeadingElement } from "./_animated";
+import { UPocHeadingElement } from "./_upoc";
 
 /**
  * Heading
@@ -13,7 +14,10 @@ export const HeadingElementElement : CmsComponent<HeadingElementDataFragment, He
 {
     if (isDefaultProps(layoutProps)) {
         return <CmsEditable as={DefaultHeadingElement} cmsId={ contentLink.key } cmsFieldName="headingText" data={ data } layoutProps={ layoutProps } ctx={ ctx } />
-    } 
+    }
+    if (isUPocHeadingStylesProps(layoutProps)) {
+        return <CmsEditable as={UPocHeadingElement} cmsId={ contentLink.key } cmsFieldName="headingText" data={ data } layoutProps={ layoutProps } ctx={ ctx } />
+    }
     if (isAnimatedHeadingStylesProps(layoutProps)) {
         const withReducedMotion = inEditMode ? true : undefined
         return <CmsEditable as={AnimatedHeadingElement} cmsId={ contentLink.key } cmsFieldName="headingText" data={ data } layoutProps={ layoutProps } withReducedMotion={withReducedMotion} ctx={ ctx } />

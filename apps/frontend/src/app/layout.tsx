@@ -2,6 +2,7 @@ import 'server-only'
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.scss";
+import "./values.scss";
 import { Body, ThemeProvider } from "@/components/theme"
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -16,6 +17,7 @@ import { ServerContext } from "@remkoj/optimizely-cms-react/rsc";
 import { OptimizelyOneProvider, PageActivator } from "@remkoj/optimizely-one-nextjs/client";
 import GoogleAnalytics from '@/components/integrations/google-analytics'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { inter } from './fonts';
 
 /* eslint-disable @next/next/no-css-tags */
 
@@ -78,7 +80,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   const enableDemoTools = EnvTools.readValueAsBoolean("OPTIMIZELY_ONE_HELPER", false);
 
   return (
-    <html lang={ locale }>
+    <html lang={ locale } className={inter.variable}>
       <head>
         <Scripts.Header experimentationAllowOverride={ !forceDisableOverride } />
         { enableDemoTools && <link key="dynamic-styles" rel="stylesheet" href="/main.css" ></link> }

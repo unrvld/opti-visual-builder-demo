@@ -1,0 +1,30 @@
+{
+    "key": "UPocHeadingStyles",
+    "displayName": "UPOC",
+    "contentType": "HeadingElement",
+    "isDefault": false,
+    "settings": {
+        "headingSize": {
+            "displayName": "Heading Size",
+            "sortOrder": 10,
+            "choices": {
+                "extraLarge" : {
+                    "displayName": "Extra Large",
+                    "sortOrder": 10
+                },
+                "default": {
+                    "displayName": "Default (Large)",
+                    "sortOrder": 20
+                },
+                "medium": {
+                    "displayName": "Medium",
+                    "sortOrder": 30
+                },
+                "small": {
+                    "displayName": "Small",
+                    "sortOrder": 40
+                }
+            }
+        }
+    }
+}

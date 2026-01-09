@@ -1,0 +1,41 @@
+{
+  "key": "ListOfLinksElement",
+  "displayName": "List of links",
+  "description": "List of links to internal or external pages, with a heading",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [
+    "elementEnabled"
+  ],
+  "properties": {
+    "heading": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Heading",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    },
+    "pageLinks": {
+      "type": "array",
+      "format": "LinkCollection",
+      "displayName": "Page Links",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {},
+      "maxItems": 8,
+      "items": {
+        "type": "component",
+        "contentType": "link"
+      }
+    }
+  }
+}

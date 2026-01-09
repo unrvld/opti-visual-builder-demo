@@ -1,6 +1,8 @@
 import type { LayoutProps } from "@remkoj/optimizely-cms-react"
 import type { ReactNode } from "react"
 import type DefaultParagraphStyles from "./DefaultParagraph.opti-style.json"
+import type UPocParagraphStyles from "./UPocParagraphStyle.opti-style.json"
+
 
 export type DefaultParagraphProps = LayoutProps<typeof DefaultParagraphStyles>
 export type DefaultParagraphComponentProps<DT extends Record<string, any> = Record<string, any>> = {
@@ -9,8 +11,15 @@ export type DefaultParagraphComponentProps<DT extends Record<string, any> = Reco
 } & JSX.IntrinsicElements['div']
 export type DefaultParagraphComponent<DT extends Record<string, any> = Record<string, any>> = (props: DefaultParagraphComponentProps<DT>) => ReactNode
 
+export type UPocParagraphProps = LayoutProps<typeof UPocParagraphStyles>
+export type UPocParagraphComponentProps<DT extends Record<string, any> = Record<string, any>> = {
+    data: DT
+    layoutProps: UPocParagraphProps | undefined
+} & JSX.IntrinsicElements['div']
+export type UPocParagraphComponent<DT extends Record<string, any> = Record<string, any>> = (props: UPocParagraphComponentProps<DT>) => ReactNode
 
-export type ParagraphElementLayoutProps = DefaultParagraphProps
+
+export type ParagraphElementLayoutProps = DefaultParagraphProps | UPocParagraphProps
 export type ParagraphElementComponentProps<DT extends Record<string, any> = Record<string, any>, LP extends ParagraphElementLayoutProps = ParagraphElementLayoutProps> = {
     data: DT
     layoutProps: LP | undefined
@@ -21,6 +30,11 @@ export type ParagraphElementComponent<DT extends Record<string, any> = Record<st
 export function isDefaultProps(props?: ParagraphElementLayoutProps | null) : props is DefaultParagraphProps
 {
     return props?.template == "DefaultParagraph"
+}
+
+export function isUPocParagraphProps(props?: ParagraphElementLayoutProps | null) : props is UPocParagraphProps
+{
+    return props?.template == "UPocParagraphStyles"
 }
 
 export function isDefaultParagraphProps(props?: ParagraphElementLayoutProps | null) : props is DefaultParagraphProps

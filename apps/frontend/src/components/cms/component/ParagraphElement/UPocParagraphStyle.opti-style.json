@@ -1,0 +1,48 @@
+{
+  "key": "UPocParagraphStyles",
+  "displayName": "UPOC",
+  "contentType": "ParagraphElement",
+  "isDefault": false,
+  "settings": {
+    "alignText": {
+      "displayName": "Align Text",
+      "sortOrder": 10,
+      "choices": {
+        "left": {
+          "displayName": "Left (default)",
+          "sortOrder": 10
+        },
+        "center": {
+          "displayName": "Center",
+          "sortOrder": 20
+        },
+        "right": {
+          "displayName": "Right",
+          "sortOrder": 30
+        }
+      }
+    },
+    "textSize": {
+      "displayName": "Text Size",
+      "sortOrder": 20,
+      "choices": {
+        "large": {
+          "displayName": "Large (default)",
+          "sortOrder": 10
+        },
+        "extraLarge": {
+          "displayName": "Extra Large",
+          "sortOrder": 20
+        },
+        "medium": {
+          "displayName": "Medium",
+          "sortOrder": 30
+        },
+        "small": {
+          "displayName": "Small",
+          "sortOrder": 40
+        }
+      }
+    }
+  }
+}

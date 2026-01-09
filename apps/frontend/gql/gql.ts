@@ -28,6 +28,7 @@ type Documents = {
     "fragment HeroBlockData on HeroBlock {\n  heroImage: HeroImage {\n    ...ReferenceData\n  }\n  eyebrow: Eyebrow\n  heroHeading: Heading\n  heroSubheading: SubHeading\n  heroDescription: Description {\n    json\n    html\n  }\n  heroColor: HeroColor\n  heroButton: HeroButton {\n    ...ButtonBlockPropertyData\n  }\n}": typeof types.HeroBlockDataFragmentDoc,
     "fragment ImageElementData on ImageElement {\n  altText\n  imageLink {\n    ...ReferenceData\n  }\n}": typeof types.ImageElementDataFragmentDoc,
     "fragment LayoutSettingsBlockData on LayoutSettingsBlock {\n  mainMenu {\n    ...IContentListItem\n  }\n  contactInfoHeading\n  serviceButtons {\n    ...IContentListItem\n  }\n  contactInfo {\n    json\n    html\n  }\n  footerMenus {\n    ...IContentListItem\n  }\n  copyright\n  legalLinks {\n    ...LinkItemData\n  }\n  appIdentifiers\n}": typeof types.LayoutSettingsBlockDataFragmentDoc,
+    "fragment ListOfLinksElementData on ListOfLinksElement {\n  heading\n  pageLinks {\n    ...LinkItemData\n  }\n}": typeof types.ListOfLinksElementDataFragmentDoc,
     "fragment MegaMenuGroupBlockData on MegaMenuGroupBlock {\n  _metadata {\n    displayName\n  }\n  MenuMenuHeading\n  MegaMenuUrl {\n    ...LinkData\n  }\n  MegaMenuContentArea {\n    ...IContentData\n    ...MenuNavigationBlockData\n    ...BlogPostPageMenuBlock\n  }\n}": typeof types.MegaMenuGroupBlockDataFragmentDoc,
     "fragment MenuNavigationBlockData on MenuNavigationBlock {\n  _metadata {\n    displayName\n  }\n  MenuNavigationHeading\n  NavigationLinks {\n    ...LinkItemData\n  }\n}": typeof types.MenuNavigationBlockDataFragmentDoc,
     "fragment OdpEmbedBlockData on OdpEmbedBlock {\n  ContentId\n}": typeof types.OdpEmbedBlockDataFragmentDoc,
@@ -77,6 +78,7 @@ const documents: Documents = {
     "fragment HeroBlockData on HeroBlock {\n  heroImage: HeroImage {\n    ...ReferenceData\n  }\n  eyebrow: Eyebrow\n  heroHeading: Heading\n  heroSubheading: SubHeading\n  heroDescription: Description {\n    json\n    html\n  }\n  heroColor: HeroColor\n  heroButton: HeroButton {\n    ...ButtonBlockPropertyData\n  }\n}": types.HeroBlockDataFragmentDoc,
     "fragment ImageElementData on ImageElement {\n  altText\n  imageLink {\n    ...ReferenceData\n  }\n}": types.ImageElementDataFragmentDoc,
     "fragment LayoutSettingsBlockData on LayoutSettingsBlock {\n  mainMenu {\n    ...IContentListItem\n  }\n  contactInfoHeading\n  serviceButtons {\n    ...IContentListItem\n  }\n  contactInfo {\n    json\n    html\n  }\n  footerMenus {\n    ...IContentListItem\n  }\n  copyright\n  legalLinks {\n    ...LinkItemData\n  }\n  appIdentifiers\n}": types.LayoutSettingsBlockDataFragmentDoc,
+    "fragment ListOfLinksElementData on ListOfLinksElement {\n  heading\n  pageLinks {\n    ...LinkItemData\n  }\n}": types.ListOfLinksElementDataFragmentDoc,
     "fragment MegaMenuGroupBlockData on MegaMenuGroupBlock {\n  _metadata {\n    displayName\n  }\n  MenuMenuHeading\n  MegaMenuUrl {\n    ...LinkData\n  }\n  MegaMenuContentArea {\n    ...IContentData\n    ...MenuNavigationBlockData\n    ...BlogPostPageMenuBlock\n  }\n}": types.MegaMenuGroupBlockDataFragmentDoc,
     "fragment MenuNavigationBlockData on MenuNavigationBlock {\n  _metadata {\n    displayName\n  }\n  MenuNavigationHeading\n  NavigationLinks {\n    ...LinkItemData\n  }\n}": types.MenuNavigationBlockDataFragmentDoc,
     "fragment OdpEmbedBlockData on OdpEmbedBlock {\n  ContentId\n}": types.OdpEmbedBlockDataFragmentDoc,
@@ -182,6 +184,10 @@ export function gql(source: "fragment ImageElementData on ImageElement {\n  altT
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(source: "fragment LayoutSettingsBlockData on LayoutSettingsBlock {\n  mainMenu {\n    ...IContentListItem\n  }\n  contactInfoHeading\n  serviceButtons {\n    ...IContentListItem\n  }\n  contactInfo {\n    json\n    html\n  }\n  footerMenus {\n    ...IContentListItem\n  }\n  copyright\n  legalLinks {\n    ...LinkItemData\n  }\n  appIdentifiers\n}"): (typeof documents)["fragment LayoutSettingsBlockData on LayoutSettingsBlock {\n  mainMenu {\n    ...IContentListItem\n  }\n  contactInfoHeading\n  serviceButtons {\n    ...IContentListItem\n  }\n  contactInfo {\n    json\n    html\n  }\n  footerMenus {\n    ...IContentListItem\n  }\n  copyright\n  legalLinks {\n    ...LinkItemData\n  }\n  appIdentifiers\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment ListOfLinksElementData on ListOfLinksElement {\n  heading\n  pageLinks {\n    ...LinkItemData\n  }\n}"): (typeof documents)["fragment ListOfLinksElementData on ListOfLinksElement {\n  heading\n  pageLinks {\n    ...LinkItemData\n  }\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

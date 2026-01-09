@@ -37,6 +37,7 @@ export const ButtonBlockComponent : ButtonBlockComponent = ({
     ctx, // Extract context to prevent passing through
     href,
     children,
+    editProps,
     ...props 
 }) => {
 

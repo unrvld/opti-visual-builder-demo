@@ -2,6 +2,7 @@ import type { LayoutProps } from "@remkoj/optimizely-cms-react"
 import type { ReactNode } from "react"
 import type AnimatedHeadingStylesStyles from "./AnimatedHeadingStyles.opti-style.json"
 import type HeadingStylesStyles from "./HeadingStyles.opti-style.json"
+import type UPocHeadingStylesStyles from "./UPocHeadingStyles.opti-style.json"
 
 export type AnimatedHeadingStylesProps = LayoutProps<typeof AnimatedHeadingStylesStyles>
 export type AnimatedHeadingStylesComponentProps<DT extends Record<string, any> = Record<string, any>> = {
@@ -17,8 +18,15 @@ export type HeadingStylesComponentProps<DT extends Record<string, any> = Record<
 } & JSX.IntrinsicElements['div']
 export type HeadingStylesComponent<DT extends Record<string, any> = Record<string, any>> = (props: HeadingStylesComponentProps<DT>) => ReactNode
 
+export type UPocHeadingStylesProps = LayoutProps<typeof UPocHeadingStylesStyles>
+export type UPocHeadingStylesComponentProps<DT extends Record<string, any> = Record<string, any>> = {
+    data: DT
+    layoutProps: UPocHeadingStylesProps | undefined
+} & JSX.IntrinsicElements['div']
+export type UPocHeadingStylesComponent<DT extends Record<string, any> = Record<string, any>> = (props: UPocHeadingStylesComponentProps<DT>) => ReactNode
 
-export type HeadingElementLayoutProps = AnimatedHeadingStylesProps | HeadingStylesProps
+
+export type HeadingElementLayoutProps = AnimatedHeadingStylesProps | HeadingStylesProps | UPocHeadingStylesProps
 export type HeadingElementComponentProps<DT extends Record<string, any> = Record<string, any>, LP extends HeadingElementLayoutProps = HeadingElementLayoutProps> = {
     data: DT
     layoutProps: LP | undefined
@@ -34,6 +42,11 @@ export function isDefaultProps(props?: HeadingElementLayoutProps | null) : props
 export function isAnimatedHeadingStylesProps(props?: HeadingElementLayoutProps | null) : props is AnimatedHeadingStylesProps
 {
     return props?.template == "AnimatedHeadingStyles"
+}
+
+export function isUPocHeadingStylesProps(props?: HeadingElementLayoutProps | null) : props is UPocHeadingStylesProps
+{
+    return props?.template == "UPocHeadingStyles"
 }
 
 export function isHeadingStylesProps(props?: HeadingElementLayoutProps | null) : props is HeadingStylesProps

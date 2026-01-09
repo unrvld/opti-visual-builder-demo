@@ -2,6 +2,7 @@ import type { LayoutProps } from "@remkoj/optimizely-cms-react"
 import type { ReactNode } from "react"
 import type CTAElementAnimatedStylesStyles from "./CTAElementAnimatedStyles.opti-style.json"
 import type CTAElementDefaultStylesStyles from "./CTAElementDefaultStyles.opti-style.json"
+import type CTAElementUPocStylesStyles from "./CTAElementUPocStyles.opti-style.json"
 
 export type CTAElementAnimatedStylesProps = LayoutProps<typeof CTAElementAnimatedStylesStyles>
 export type CTAElementAnimatedStylesComponentProps<DT extends Record<string, any> = Record<string, any>> = {
@@ -17,8 +18,15 @@ export type CTAElementDefaultStylesComponentProps<DT extends Record<string, any>
 } & JSX.IntrinsicElements['div']
 export type CTAElementDefaultStylesComponent<DT extends Record<string, any> = Record<string, any>> = (props: CTAElementDefaultStylesComponentProps<DT>) => ReactNode
 
+export type CTAElementUPocStylesProps = LayoutProps<typeof CTAElementUPocStylesStyles>
+export type CTAElementUPocStylesComponentProps<DT extends Record<string, any> = Record<string, any>> = {
+    data: DT
+    layoutProps: CTAElementUPocStylesProps | undefined
+} & JSX.IntrinsicElements['div']
+export type CTAElementUPocStylesComponent<DT extends Record<string, any> = Record<string, any>> = (props: CTAElementUPocStylesComponentProps<DT>) => ReactNode
 
-export type CTAElementLayoutProps = CTAElementAnimatedStylesProps | CTAElementDefaultStylesProps
+
+export type CTAElementLayoutProps = CTAElementAnimatedStylesProps | CTAElementDefaultStylesProps | CTAElementUPocStylesProps
 export type CTAElementComponentProps<DT extends Record<string, any> = Record<string, any>, LP extends CTAElementLayoutProps = CTAElementLayoutProps> = {
     data: DT
     layoutProps: LP | undefined
@@ -39,4 +47,9 @@ export function isCTAElementAnimatedStylesProps(props?: CTAElementLayoutProps | 
 export function isCTAElementDefaultStylesProps(props?: CTAElementLayoutProps | null) : props is CTAElementDefaultStylesProps
 {
     return props?.template == "CTAElementDefaultStyles"
+}
+
+export function isCTAElementUPocStylesProps(props?: CTAElementLayoutProps | null) : props is CTAElementUPocStylesProps
+{
+    return props?.template == "CTAElementUPocStyles"
 }

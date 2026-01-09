@@ -12,6 +12,7 @@ import OdpEmbedBlockComponent from "./OdpEmbedBlock";
 import MenuNavigationBlockComponent from "./MenuNavigationBlock";
 import MegaMenuGroupBlockMobileComponent from "./MegaMenuGroupBlock/mobile";
 import MegaMenuGroupBlockComponent from "./MegaMenuGroupBlock";
+import ListOfLinksElementComponent from "./ListOfLinksElement";
 import LayoutSettingsBlockComponent from "./LayoutSettingsBlock";
 import ImageElementComponent from "./ImageElement";
 import HeroBlockComponent from "./HeroBlock";
@@ -73,6 +74,10 @@ export const ComponentFactory : ComponentTypeDictionary = [
     { 
         type: "MegaMenuGroupBlock", 
         component: MegaMenuGroupBlockComponent 
+    },
+    { 
+        type: "ListOfLinksElement", 
+        component: ListOfLinksElementComponent 
     },
     { 
         type: "LayoutSettingsBlock", 

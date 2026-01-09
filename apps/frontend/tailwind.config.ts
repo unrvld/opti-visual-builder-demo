@@ -24,7 +24,19 @@ const config: Config = {
       'pale-sky': '#656C81',
       'currentColor': 'currentColor',
       'transparent': 'transparent',
-      'inherit': 'inherit'
+      'inherit': 'inherit',
+      // POC
+      'grey' : {
+        200: '#F0F5F6',
+        300: '#DCE5E7',
+        400: '#A2B3B6',
+        500: '#2A3E42',
+        600: '#162224',
+      },
+      'red' : {
+        400: '#E0384E',
+        500: '#C22338'
+      }
     },
     extend: {
       typography: {
@@ -41,6 +53,27 @@ const config: Config = {
           },
         },
       },
+      spacing: {
+        'spacing-00': 'var(--spacing-00)',
+        'spacing-1px': 'var(--spacing-1px)',
+        'spacing-0_25': 'var(--spacing-0_25)',
+        'spacing-0_5': 'var(--spacing-0_5)',
+        'spacing-1': 'var(--spacing-1)',
+        'spacing-1_5': 'var(--spacing-1_5)',
+        'spacing-2': 'var(--spacing-2)',
+        'spacing-3': 'var(--spacing-3)',
+        'spacing-4': 'var(--spacing-4)',
+        'spacing-5': 'var(--spacing-5)',
+        'spacing-6': 'var(--spacing-6)',
+        'spacing-7': 'var(--spacing-7)',
+        'section-gap-00': 'var(--section-gap-00)',
+        'section-gap-compact': 'var(--section-gap-compact)',
+        'section-gap-default': 'var(--section-gap-default)',
+        'section-gap-extended': 'var(--section-gap-extended)',
+      },
+      fontFamily: {
+        inter: 'var(--font-inter)'
+      }
     }
   },
   safelist: [

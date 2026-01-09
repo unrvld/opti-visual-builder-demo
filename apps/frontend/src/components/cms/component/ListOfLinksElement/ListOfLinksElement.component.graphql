@@ -1,0 +1,4 @@
+fragment ListOfLinksElementData on ListOfLinksElement {
+  heading
+  pageLinks { ...LinkItemData }
+}

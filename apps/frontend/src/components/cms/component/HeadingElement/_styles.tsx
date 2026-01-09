@@ -5,14 +5,14 @@ export type StyleDictionary = Omit<{
     [K in LayoutPropsSettingKeys<HeadingElementLayoutProps>]: {
         [SV in LayoutPropsSettingValues<HeadingElementLayoutProps, K>]: string
     };
-}, 'showAs' | 'delay'> & Pick<{
+}, 'showAs' | 'delay' | 'headingSize'> & Pick<{
     [K in LayoutPropsSettingKeys<HeadingElementLayoutProps>]: {
         [SV in LayoutPropsSettingValues<HeadingElementLayoutProps, K>]: number
     };
 }, 'delay'>
-export type StyleDefaults = {
+export type StyleDefaults = Omit<{
     [K in LayoutPropsSettingKeys<HeadingElementLayoutProps>]: LayoutPropsSettingValues<HeadingElementLayoutProps, K>
-}
+}, 'headingSize'>
 
 export const styleDefaults : StyleDefaults = {
     transform: 'keep',

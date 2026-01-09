@@ -217,6 +217,14 @@ export const LayoutSettingsBlockDataFragmentDoc = gql`
   appIdentifiers
 }
     `;
+export const ListOfLinksElementDataFragmentDoc = gql`
+    fragment ListOfLinksElementData on ListOfLinksElement {
+  heading
+  pageLinks {
+    ...LinkItemData
+  }
+}
+    `;
 export const MenuNavigationBlockDataFragmentDoc = gql`
     fragment MenuNavigationBlockData on MenuNavigationBlock {
   _metadata {
@@ -372,6 +380,7 @@ export const ContinueReadingComponentDataFragmentDoc = gql`
     ...HeroBlockData
     ...ImageElementData
     ...LayoutSettingsBlockData
+    ...ListOfLinksElementData
     ...MegaMenuGroupBlockData
     ...MenuNavigationBlockData
     ...OdpEmbedBlockData
@@ -403,6 +412,7 @@ export const CarouselBlockDataFragmentDoc = gql`
     ...HeroBlockData
     ...ImageElementData
     ...LayoutSettingsBlockData
+    ...ListOfLinksElementData
     ...MegaMenuGroupBlockData
     ...MenuNavigationBlockData
     ...OdpEmbedBlockData
@@ -432,6 +442,7 @@ export const CompositionComponentNodeDataFragmentDoc = gql`
     ...HeroBlockData
     ...ImageElementData
     ...LayoutSettingsBlockData
+    ...ListOfLinksElementData
     ...MegaMenuGroupBlockData
     ...MenuNavigationBlockData
     ...OdpEmbedBlockData
@@ -513,6 +524,7 @@ export const BlogPostPageDataFragmentDoc = gql`
     ...HeroBlockData
     ...ImageElementData
     ...LayoutSettingsBlockData
+    ...ListOfLinksElementData
     ...MegaMenuGroupBlockData
     ...MenuNavigationBlockData
     ...OdpEmbedBlockData
@@ -557,6 +569,7 @@ export const LandingPageDataFragmentDoc = gql`
     ...HeroBlockData
     ...ImageElementData
     ...LayoutSettingsBlockData
+    ...ListOfLinksElementData
     ...MegaMenuGroupBlockData
     ...MenuNavigationBlockData
     ...OdpEmbedBlockData
@@ -581,6 +594,7 @@ export const LandingPageDataFragmentDoc = gql`
     ...HeroBlockData
     ...ImageElementData
     ...LayoutSettingsBlockData
+    ...ListOfLinksElementData
     ...MegaMenuGroupBlockData
     ...MenuNavigationBlockData
     ...OdpEmbedBlockData
@@ -684,6 +698,7 @@ ${ButtonBlockPropertyDataFragmentDoc}
 ${ImageElementDataFragmentDoc}
 ${LayoutSettingsBlockDataFragmentDoc}
 ${LinkItemDataFragmentDoc}
+${ListOfLinksElementDataFragmentDoc}
 ${MegaMenuGroupBlockDataFragmentDoc}
 ${MenuNavigationBlockDataFragmentDoc}
 ${BlogPostPageMenuBlockFragmentDoc}
@@ -1089,6 +1104,7 @@ export const getContentByIdDocument = gql`
       ...HeroBlockData
       ...ImageElementData
       ...LayoutSettingsBlockData
+      ...ListOfLinksElementData
       ...MegaMenuGroupBlockData
       ...MenuNavigationBlockData
       ...OdpEmbedBlockData
@@ -1128,6 +1144,7 @@ ${ButtonBlockPropertyDataFragmentDoc}
 ${ImageElementDataFragmentDoc}
 ${LayoutSettingsBlockDataFragmentDoc}
 ${LinkItemDataFragmentDoc}
+${ListOfLinksElementDataFragmentDoc}
 ${MegaMenuGroupBlockDataFragmentDoc}
 ${MenuNavigationBlockDataFragmentDoc}
 ${BlogPostPageMenuBlockFragmentDoc}
@@ -1195,6 +1212,7 @@ ${ButtonBlockPropertyDataFragmentDoc}
 ${ImageElementDataFragmentDoc}
 ${LayoutSettingsBlockDataFragmentDoc}
 ${LinkItemDataFragmentDoc}
+${ListOfLinksElementDataFragmentDoc}
 ${MegaMenuGroupBlockDataFragmentDoc}
 ${MenuNavigationBlockDataFragmentDoc}
 ${BlogPostPageMenuBlockFragmentDoc}
