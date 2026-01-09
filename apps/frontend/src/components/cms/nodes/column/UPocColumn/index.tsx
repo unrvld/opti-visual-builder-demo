@@ -35,9 +35,9 @@ const paddingClasses: UPocColumnLayoutDict<"padding", ClassValue> = {
 };
 
 const sizeClassName: UPocColumnLayoutDict<"size", ClassValue> = {
-  full: "w-full",
-  half: "md:w-1/2",
-  twoThirds: "md:w-2/3",
+  full: "flex-1",
+  half: "max-md:flex-1 md:w-1/2",
+  twoThirds: "max-md:flex-1 md:w-2/3",
 };
 
 export const UPocColumn: CmsLayoutComponent<UPocColumnProps> = ({
@@ -56,7 +56,7 @@ export const UPocColumn: CmsLayoutComponent<UPocColumnProps> = ({
   return (
     <div
       className={clsx(
-        "relative top-0 vb:column flex-1 flex flex-col",
+        "relative top-0 vb:column flex flex-col",
         `vb:column:${tpl}`,
         spacingClasses[spacing],
         paddingClasses[padding],

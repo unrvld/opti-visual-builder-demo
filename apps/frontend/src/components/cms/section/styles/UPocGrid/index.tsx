@@ -41,7 +41,7 @@ export const UPocGrid: UPocGridComponent = ({ children, layoutProps }) => {
   return (
     <section
       className={clsx(
-        "vb:section vb:section:UPocGrid isolate relative container mx-auto",
+        "vb:section vb:section:UPocGrid isolate relative flex flex-col justify-center container mx-auto",
         paddingClasses[padding],
         minimumHeightClasses[minimumHeight],
         themeClasses[theme],
